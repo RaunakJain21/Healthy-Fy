@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .dropdown.dropdown-scroll .dropdown-list{
+    max-height: 233px;
+    overflow-y: auto;
+    list-style-type: none;
+    padding-left: 10px;
+    margin-bottom: 0px;
+}
+.dropdown-list  li{
+    font-size: 14px;
+    height: 20px;
+}
+
+.dropdown-list  li > a{
+    color: black;
+}
+.dropdown-list a:hover{
+   color: black;
+}
+
+.dropdown-list li:hover{
+    background-color: lightgray;
+}
+      </style>
+</head>
+<body>
+    <body>
+        <div class="wrapper">
+          <div class="select-btn">
+            <span>Select Country</span>
+            <i class="uil uil-angle-down"></i>
+          </div>
+          <div class="content">
+            <div class="search">
+              <i class="uil uil-search"></i>
+              <input spellcheck="false" type="text" placeholder="Search">
+            </div>
+            <ul class="options"></ul>
+          </div>
+        </div>
+        <script>
+            const wrapper = document.querySelector(".wrapper"),
+selectBtn = wrapper.querySelector(".select-btn"),
+searchInp = wrapper.querySelector("input"),
+options = wrapper.querySelector(".options");
+let countries = ["Afghanistan", "Algeria", "Argentina", "Australia", "Bangladesh", "Belgium", "Bhutan",
+                 "Brazil", "Canada", "China", "Denmark", "Ethiopia", "Finland", "France", "Germany",
+                 "Hungary", "Iceland", "India", "Indonesia", "Iran", "Italy", "Japan", "Malaysia",
+                 "Maldives", "Mexico", "Morocco", "Nepal", "Netherlands", "Nigeria", "Norway", "Pakistan",
+                 "Peru", "Russia", "Romania", "South Africa", "Spain", "Sri Lanka", "Sweden", "Switzerland",
+                 "Thailand", "Turkey", "Uganda", "Ukraine", "United States", "United Kingdom", "Vietnam"];
+function addCountry(selectedCountry) {
+    options.innerHTML = "";
+    countries.forEach(country => {
+        let isSelected = country == selectedCountry ? "selected" : "";
+        let li = `<li onclick="updateName(this)" class="${isSelected}">${country}</li>`;
+        options.insertAdjacentHTML("beforeend", li);
+    });
+}
+addCountry();
+function updateName(selectedLi) {
+    searchInp.value = "";
+    addCountry(selectedLi.innerText);
+    wrapper.classList.remove("active");
+    selectBtn.firstElementChild.innerText = selectedLi.innerText;
+}
+searchInp.addEventListener("keyup", () => {
+    let arr = [];
+    let searchWord = searchInp.value.toLowerCase();
+    arr = countries.filter(data => {
+        return data.toLowerCase().startsWith(searchWord);
+    }).map(data => {
+        let isSelected = data == selectBtn.firstElementChild.innerText ? "selected" : "";
+        return `<li onclick="updateName(this)" class="${isSelected}">${data}</li>`;
+    }).join("");
+    options.innerHTML = arr ? arr : `<p style="margin-top: 10px;">Oops! Country not found</p>`;
+});
+selectBtn.addEventListener("click", () => wrapper.classList.toggle("active"));
+        </script>
+            
+</body>
+</html>

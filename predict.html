@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
+
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <!-- 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <!-- Popper Js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha256-CjSoeELFOcH0/uxWu6mC/Vlrc1AARqbm/jiiImDGV3s="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/c9f70db3c4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img src="images/newlogo.png" id="logo" alt="" />
+
+      <nav class="navbar">
+        <a href="index.html">home</a>
+        <a href="#about">about</a>
+        <a href="#services">services</a>
+        <a href="#">gallery</a>
+        <a href="#">contact</a>
+      </nav>
+
+      <div class="icons">
+        <div id="menubar" class="fas fa-bars"></div>
+        <a href="#">contact</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="row">
+        <form class="col-md-4">
+          <label>Select</label>
+          <select class="form-control select2">
+            <option>Select</option>
+            <option>Car</option>
+            <option>Bike</option>
+            <option>Scooter</option>
+            <option>Cycle</option>
+            <option>Horse</option>
+          </select>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="background-image">
+      <div class="background-content">
+        <h1>
+          provide an exceptional <br />
+          patient experience
+        </h1>
+        <p>
+          It is a Health that is real wealth<br />not the pieces of gold<br />
+          silver and diamond
+        </p>
+        <a href="#">Read more</a>
+      </div>
+    </div> -->
+    <!-- <div class="footer">
+        <div class="main-footer">
+          <div class="inner-footer">
+            <img src="images/newlogo.png" alt="" />
+          </div>
+  
+          <div class="inner-footer">
+            <h2>heading</h2>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+          </div>
+  
+          <div class="inner-footer">
+            <h2>heading</h2>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+            <a href="#">lorem</a>
+          </div>
+  
+
+    <div class="inner-footer">
+        <h2>heading</h2>
+        <a href="#">lorem</a>
+        <a href="#">lorem</a>
+        <a href="#">lorem</a>
+        <a href="#">lorem</a>
+        <a href="#">lorem</a>
+      </div>
+    </div>
+  </div> -->
+
+    <div class="dropdown hierarchy-select" id="example">
+      <button
+        type="button"
+        class="btn btn-secondary dropdown-toggle"
+        id="example-two-button"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      ></button>
+      <div class="dropdown-menu" aria-labelledby="example-two-button">
+        <div class="hs-searchbox">
+          <input type="text" class="form-control" autocomplete="off" />
+        </div>
+        <div class="hs-menu-inner">
+          <a
+            class="dropdown-item"
+            data-value=""
+            data-default-selected=""
+            href="#"
+            >All colors</a
+          >
+          <a class="dropdown-item" data-value="1" href="#">Red</a>
+          <a class="dropdown-item" data-value="2" href="#">Orange</a>
+          <a class="dropdown-item" data-value="3" href="#">Yellow</a>
+          <a class="dropdown-item" data-value="4" href="#">Green</a>
+          <a class="dropdown-item" data-value="5" href="#">Blue</a>
+          <a class="dropdown-item" data-value="6" href="#">Purple</a>
+          <a class="dropdown-item" data-value="7" href="#">Pink</a>
+          <a class="dropdown-item" data-value="8" href="#">Brown</a>
+          <a class="dropdown-item" data-value="9" href="#">Black</a>
+          <a class="dropdown-item" data-value="10" href="#">Grey</a>
+          <a class="dropdown-item" data-value="11" href="#">White</a>
+        </div>
+      </div>
+      <input
+        class="d-none"
+        name="example_two"
+        readonly="readonly"
+        aria-hidden="true"
+        type="text"
+      />
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+      $(".select2").select2();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+:root {
+  --mainclr: #10e0e7;
+  --secclr: #ff5d22;
+  --third: #dfe4e0;
+  --mainafterclr: hsl(167, 81%, 79%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.2s;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+html {
+  font-size: 62.5%;
+}
+.header {
+  padding: 1rem 7%;
+  background-color: var(--mainclr);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+.header #logo {
+  width: 70px;
+}
+
+.navbar a {
+  color: black;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+  position: relative;
+  font-weight: bolder;
+}
+.navbar a:after {
+  content: "";
+  background: var(--secclr);
+  width: 0;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+  transition: 0.3s;
+}
+.navbar a:hover:after {
+  content: "";
+  background: var(--secclr);
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 5px;
+}
+.icons div {
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: white;
+  display: none;
+}
+.icons a {
+  color: white;
+  background: var(--secclr);
+  padding: 1.5rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.icons a:hover {
+  background: transparent;
+  border: 1px solid var(--secclr);
+}
+.navbar.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
